@@ -1,6 +1,6 @@
 package com.project.moneyismine.repository;
 
-import org.springframework.context.annotation.Role;
+import com.project.moneyismine.entity.Role;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

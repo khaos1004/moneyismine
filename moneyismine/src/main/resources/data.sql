@@ -6,6 +6,7 @@ INSERT INTO ROLE (name, description) VALUES ('USER', 'User ROLE');
 INSERT INTO APP_USER (username, password, email, first_name, last_name) VALUES ('user1', 'password1', 'user1@example.com', 'First1', 'Last1');
 INSERT INTO APP_USER (username, password, email, first_name, last_name) VALUES ('user2', 'password2', 'user2@example.com', 'First2', 'Last2');
 INSERT INTO APP_USER (username, password, email, first_name, last_name) VALUES ('user3', 'password3', 'user3@example.com', 'First3', 'Last3');
+
 -- 총 20개의 사용자 데이터 삽입
 INSERT INTO APP_USER (username, password, email, first_name, last_name) VALUES ('user4', 'password4', 'user4@example.com', 'First4', 'Last4');
 INSERT INTO APP_USER (username, password, email, first_name, last_name) VALUES ('user5', 'password5', 'user5@example.com', 'First5', 'Last5');

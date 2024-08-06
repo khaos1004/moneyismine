@@ -32,6 +32,8 @@ out/
 /dist/
 /nbdist/
 /.nb-gradle/
+
+### Q Class
 /src/main/generated
 
 ### VS Code ###
