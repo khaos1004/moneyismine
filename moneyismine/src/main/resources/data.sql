@@ -47,3 +47,27 @@ INSERT INTO USER_ROLE (user_id, role_id) VALUES (17, 1);
 INSERT INTO USER_ROLE (user_id, role_id) VALUES (18, 1);
 INSERT INTO USER_ROLE (user_id, role_id) VALUES (19, 2);
 INSERT INTO USER_ROLE (user_id, role_id) VALUES (20, 2);
+
+-- 첫 번째 계정 추가 (admin)
+INSERT INTO Users (username, email, password_hash, first_name, last_name, birth_date, role)
+VALUES (
+           'admin_user',
+           'admin@example.com',
+           'hashed_password_1',  -- 이 부분은 실제로 해시된 비밀번호로 교체해야 합니다.
+           'Admin',
+           'User',
+           '1980-01-01',
+           'admin'
+       );
+
+-- 두 번째 계정 추가 (user)
+INSERT INTO Users (username, email, password_hash, first_name, last_name, birth_date, role)
+VALUES (
+           'regular_user',
+           'user@example.com',
+           'hashed_password_2',  -- 이 부분도 실제로 해시된 비밀번호로 교체해야 합니다.
+           'Regular',
+           'User',
+           '1990-01-01',
+           'user'
+       );
