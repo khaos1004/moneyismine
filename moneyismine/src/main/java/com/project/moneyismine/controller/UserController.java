@@ -3,7 +3,7 @@ package com.project.moneyismine.controller;
 import com.project.moneyismine.entity.AppUser;
 import com.project.moneyismine.entity.User;
 import com.project.moneyismine.repository.UsersRepository;
-import com.project.moneyismine.service.UserService;
+//import com.project.moneyismine.service.UserService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -16,9 +16,9 @@ import java.util.Optional;
 
 @RestController
 @AllArgsConstructor
-@RequestMapping("/api")
+@RequestMapping("/user")
 public class UserController {
-    private UserService userService;
+//    private UserService userService;
     private final UsersRepository usersRepository;
 
 //    @GetMapping("/insertUser")
@@ -49,11 +49,19 @@ public class UserController {
 //        return ResponseEntity.ok(Map.of("ok", false, "result", result));
 //    }
 
-    @GetMapping("/{username}")
-    public ResponseEntity<User> getUserByUsername(@PathVariable String username) {
-        Optional<User> user = usersRepository.findByUsername(username);
+//    @GetMapping("/name/{username}")
+//    public ResponseEntity<User> getUserByUsername(@PathVariable String username) {
+//        Optional<User> user = usersRepository.findByUsername(username);
+//        return user.map(ResponseEntity::ok)
+//                .orElseGet(() -> ResponseEntity.status(HttpStatus.NOT_FOUND).build());
+//    }
+
+    @GetMapping("/id/{userId}")
+    public ResponseEntity<User> getUserByUserId(@PathVariable("userId") Long userid) {
+        Optional<User> user = usersRepository.findByUserId(userid);
         return user.map(ResponseEntity::ok)
-                .orElseGet(() -> ResponseEntity.status(HttpStatus.NOT_FOUND).build());
+                .orElseGet(() -> ResponseEntity.notFound().build());
     }
+
 
 }

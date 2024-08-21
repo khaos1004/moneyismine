@@ -6,8 +6,8 @@ import org.springframework.stereotype.Component;
 
 import java.util.Optional;
 
-@Component
-public class UserInfo {
+//@Component
+//public class UserInfo {
 //    private final AppUserRepository appUserRepository;
 //
 //    public UserInfo(AppUserRepository appUserRepository) {
@@ -21,4 +21,4 @@ public class UserInfo {
 //    public Optional<AppUser> findByUsername(String username) {
 //        return appUserRepository.findByUsername(username);
 //    };
-}
+//}
