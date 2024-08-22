@@ -1,11 +1,11 @@
 package com.project.moneyismine.controller;
 
-import com.project.moneyismine.entity.AppUser;
-import com.project.moneyismine.entity.User;
+import com.project.moneyismine.entity.Users;
 import com.project.moneyismine.repository.UsersRepository;
 //import com.project.moneyismine.service.UserService;
+import com.project.moneyismine.repository.UsersRepositoryCustom;
+import com.project.moneyismine.repository.UsersRepositoryImpl;
 import lombok.AllArgsConstructor;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -57,8 +57,16 @@ public class UserController {
 //    }
 
     @GetMapping("/id/{userId}")
-    public ResponseEntity<User> getUserByUserId(@PathVariable("userId") Long userid) {
-        Optional<User> user = usersRepository.findByUserId(userid);
+    public ResponseEntity<Users> getUserByUserId(@PathVariable("userId") Long userid) {
+        Optional<Users> user = usersRepository.findByUserId(userid);
+        return user.map(ResponseEntity::ok)
+                .orElseGet(() -> ResponseEntity.notFound().build());
+    }
+
+    @GetMapping("/idid/{userId}")
+    public ResponseEntity<Users> getUserById(@PathVariable("userId") Long userId) {
+        Optional<Users> user = usersRepository.userlist(userId);
+
         return user.map(ResponseEntity::ok)
                 .orElseGet(() -> ResponseEntity.notFound().build());
     }
