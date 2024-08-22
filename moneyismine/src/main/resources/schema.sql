@@ -29,8 +29,8 @@
 -- 로그인 할때 사용할 테이블
 CREATE TABLE Users (
        user_id INT AUTO_INCREMENT PRIMARY KEY,
-       username VARCHAR(50) NOT NULL UNIQUE,
-       email VARCHAR(100) NOT NULL UNIQUE,
+       username VARCHAR(50) UNIQUE,
+       email VARCHAR(100) UNIQUE,
        password_hash VARCHAR(255) NOT NULL,
        first_name VARCHAR(50),
        last_name VARCHAR(50),
@@ -38,7 +38,7 @@ CREATE TABLE Users (
        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
        updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
        is_active BOOLEAN DEFAULT TRUE,
-       role ENUM('admin', 'user') NOT NULL DEFAULT 'user'
+       role ENUM('admin', 'user') DEFAULT 'user'
 );
 
 CREATE TABLE Email_Verifications (
