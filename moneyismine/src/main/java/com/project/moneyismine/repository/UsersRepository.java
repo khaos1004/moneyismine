@@ -11,3 +11,4 @@ public interface UsersRepository extends JpaRepository<Users, Long>, UsersReposi
     Optional<Users> findByUsername(String username);
     Optional<Users> findByUserId(Long userId); // 이 메서드는 QueryDSL이 아닌 기본 JPA 방식으로 사용
 }
+

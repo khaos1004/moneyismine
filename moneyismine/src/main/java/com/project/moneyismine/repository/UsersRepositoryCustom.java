@@ -6,4 +6,6 @@ import java.util.Optional;
 
 public interface UsersRepositoryCustom {
     Optional<Users> userlist(Long userId);
+
+    Optional<Users> userName(String userName);
 }

@@ -31,7 +31,7 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.jetbrains.kotlin:kotlin-reflect' // Kotlin 반영성
 	implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk8' // Kotlin 표준 라이브러리
-	implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.0.2' //swagger
+	implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.3.0' //swagger
 	compileOnly 'org.projectlombok:lombok'
 	runtimeOnly 'com.h2database:h2'
 	annotationProcessor 'org.projectlombok:lombok'
